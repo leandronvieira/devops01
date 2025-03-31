@@ -10,7 +10,10 @@ phases:
   build:
     commands:
       - echo "A compilação começou em $(date)"
-      - cp index.html /var/www/html
+      # Cria o diretório de destino, se necessário
+      - sudo mkdir -p /var/www/html
+      # Copia o arquivo com permissões elevadas
+      - sudo cp index.html /var/www/html
 
   post_build:
     commands:
@@ -19,4 +22,5 @@ phases:
 artifacts:
   files:
     - /var/www/html/index.html
+
 
