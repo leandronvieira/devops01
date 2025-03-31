@@ -4,9 +4,8 @@ phases:
   install:
     commands:
       - echo "Instalando o NGINX"
-      - echo "apt-get install NGINX"
-      - sudo apt-get update
-      - sudo apt-get install nginx -y
+      - sudo yum update -y
+      - sudo yum install nginx -y
 
   build:
     commands:
@@ -16,10 +15,8 @@ phases:
   post_build:
     commands:
       - echo "Configurando artefatos do NGINX"
-      # Se quiser copiar arquivos ou executar algo adicional, coloque aqui
 
-# Se você quiser que o CodeBuild gere artefatos, adicione a seção abaixo.
-# Se não precisar, pode remover a seção artifacts.
 artifacts:
   files:
     - /var/www/html/index.html
+
