@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CI/CD na AWS</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1200x300?text=CI/CD+na+AWS') no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: red; /* Título exibido em vermelho */
+    }
+    footer {
+      background-color: #343a40;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">AWS CI/CD</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+         <li class="nav-item active">
+            <a class="nav-link" href="#">Início</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Serviços</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Contato</a>
+         </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header com imagem de fundo -->
+  <header class="hero">
+    <h1>CI/CD na AWS</h1>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <section class="content container my-5">
+      <h2 class="mb-4">Introdução</h2>
+      <p>
+        A integração contínua (CI) e a entrega contínua (CD) são práticas essenciais para acelerar o desenvolvimento e melhorar a qualidade dos lançamentos de software.
+        A AWS oferece uma série de serviços, como CodeBuild, CodeDeploy e CodePipeline, que facilitam a implementação de pipelines de CI/CD.
+      </p>
+      
+      <h2 class="mt-5 mb-4">Principais Serviços</h2>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">AWS CodeBuild</h5>
+                  <p class="card-text">
+                    Serviço gerenciado para compilar código, executar testes e criar artefatos prontos para deploy.
+                  </p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">AWS CodeDeploy</h5>
+                  <p class="card-text">
+                    Automatiza o deployment de aplicações para diversos ambientes, como EC2, Lambda e servidores on-premises.
+                  </p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">AWS CodePipeline</h5>
+                  <p class="card-text">
+                    Orquestra todas as etapas do pipeline de entrega, integrando CodeBuild, CodeDeploy e outras ferramentas.
+                  </p>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <h2 class="mt-5 mb-4">Benefícios</h2>
+      <ul>
+          <li>Automação completa dos processos de build, teste e deploy.</li>
+          <li>Redução de erros e aumento da confiabilidade das entregas.</li>
+          <li>Facilita a implementação de práticas DevOps e a colaboração entre equipes.</li>
+      </ul>
+
+      <h2 class="mt-5 mb-4">Conclusão</h2>
+      <p>
+        A utilização dos serviços de CI/CD da AWS permite maior agilidade e qualidade no desenvolvimento de aplicações.
+        Adote essas práticas e transforme seu processo de desenvolvimento e entrega.
+      </p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="text-white text-center p-3">
+      <p>&copy; 2025 AWS CI/CD. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS e dependências -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
