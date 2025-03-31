@@ -1,15 +1,25 @@
-versão:  0.2 
+version: 0.2
 
-fases: 
-  instalação: 
-    comandos: 
-      -  echo  Instalando  o NGINX  -  echo  apt-get  install  NGINX 
-      -  sudo  apt-get  update 
-      -  sudo  apt-get  install  nginx  -y 
-   build: 
-    comandos: 
-      -  echo  A compilação  começou  em  date` 
-      -  cp  index.html  /var/www/html 
-  post_build: 
-    comandos: 
-      -  echo  Configurando  artefatos do NGINX : arquivos: -/var/www/html/index.html
+phases:
+  install:
+    commands:
+      - echo "Instalando o NGINX"
+      - echo "apt-get install NGINX"
+      - sudo apt-get update
+      - sudo apt-get install nginx -y
+
+  build:
+    commands:
+      - echo "A compilação começou em $(date)"
+      - cp index.html /var/www/html
+
+  post_build:
+    commands:
+      - echo "Configurando artefatos do NGINX"
+      # Se quiser copiar arquivos ou executar algo adicional, coloque aqui
+
+# Se você quiser que o CodeBuild gere artefatos, adicione a seção abaixo.
+# Se não precisar, pode remover a seção artifacts.
+artifacts:
+  files:
+    - /var/www/html/index.html
