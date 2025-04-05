@@ -1,16 +1,11 @@
 version: 0.2
 
-phases:
-  install:
-    runtime-versions:
-      ruby: latest
-
 artifacts:
   files:
     - appspec.yml
-    - index.html
-    - install_nginx.sh
-    - start_nginx.sh
+    - scripts/*
+    - var/www/html/*
+
 
 
 
