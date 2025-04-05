@@ -1,0 +1,14 @@
+version:  0.0                #especifica o número da versão do formato do arquivo. 
+os:  linux                   #especifica o sistema operacional a ser usado. 
+files:                      #é uma matriz de arquivos a serem copiados do diretório de origem para o de destino. 
+  -  source:/                #especifica o diretório de origem. 
+destination:  /var/www/html  #especifica o diretório de destino para onde os arquivos serão copiados. 
+  hooks:                    #é uma matriz de scripts a serem executados em diferentes pontos durante o processo de implantação. 
+    AfterInstall:           #especifica um script a ser executado após a instalação do aplicativo. 
+      -  location:  scripts/install_nginx.sh  #especifica o local do arquivo de script a ser executado 
+        timeout:  300        #especifica o tempo máximo em segundos que o script pode ser executado. 
+        runas:  root         #especifica o usuário como o qual o script deve ser executado. 
+    ApplicationStart:       #especifica um script a ser executado após o aplicativo ter sido iniciado. 
+      -  location:  scripts/start_nginx.sh 
+        timeout:  300 
+        runas:  root
