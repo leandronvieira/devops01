@@ -1,11 +1,15 @@
 version: 0.2
 
+phases:
+  install:
+    runtime-versions:
+      ruby: latest
+
 artifacts:
   files:
     - appspec.yml
     - scripts/*
-    - var/www/html/*
-
+    - var/www/html/index.html
 
 
 
