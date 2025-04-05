@@ -2,25 +2,15 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - echo "Instalando o NGINX"
-      - sudo yum update -y
-      - sudo yum install nginx -y
-
-  build:
-    commands:
-      - echo "A compilação começou em $(date)"
-      # Cria o diretório de destino, se necessário
-      - sudo mkdir -p /var/www/html
-      # Copia o arquivo com permissões elevadas
-      - sudo cp index.html /var/www/html
-
-  post_build:
-    commands:
-      - echo "Configurando artefatos do NGINX"
+    runtime-versions:
+      ruby: latest
 
 artifacts:
   files:
-    - /var/www/html/index.html
+    - appspec.yml
+    - index.html
+    - install_nginx.sh
+    - start_nginx.sh
+
 
 
