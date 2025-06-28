@@ -15,7 +15,7 @@ artifacts:
   files:
     - appspec.yml
     - index.html
-    - install_nginx.sh
+    - setup_nginx.sh
     - start_nginx.sh
 
 
