@@ -4,9 +4,10 @@ os: linux
 files:
   - source: /
     destination: /var/www/html
+    overwrite: yes
 
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: install_nginx.sh
       timeout: 300
       runas: root

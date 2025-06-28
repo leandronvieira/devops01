@@ -3,7 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Nada a instalar" 
+      - echo "Fase de instalação iniciada - nada a instalar"
+  build:
+    commands:
+      - echo "Fase de build iniciada - nada a compilar"
+  post_build:
+    commands:
+      - echo "Build finalizado com sucesso"
 
 artifacts:
   files:
@@ -11,6 +17,7 @@ artifacts:
     - index.html
     - install_nginx.sh
     - start_nginx.sh
+
 
 
 
